@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1404526E1DD06B7500D5A0AC /* w1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1404526D1DD06B7500D5A0AC /* w1.png */; };
+		140452701DD06B7E00D5A0AC /* try.png in Resources */ = {isa = PBXBuildFile; fileRef = 1404526F1DD06B7E00D5A0AC /* try.png */; };
+		140452721DD06B8900D5A0AC /* swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 140452711DD06B8900D5A0AC /* swipe.png */; };
+		140452741DD06B9300D5A0AC /* pop.png in Resources */ = {isa = PBXBuildFile; fileRef = 140452731DD06B9300D5A0AC /* pop.png */; };
+		140452761DD06B9A00D5A0AC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 140452751DD06B9A00D5A0AC /* logo.png */; };
+		140452781DD0786700D5A0AC /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 140452771DD0786700D5A0AC /* Audio */; };
+		14707B8D1DD0A030000D40AA /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14707B8C1DD0A030000D40AA /* OptionsViewController.swift */; };
 		14FD98ED1DD061660084082E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD98EC1DD061660084082E /* AppDelegate.swift */; };
 		14FD98EF1DD061660084082E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD98EE1DD061660084082E /* ViewController.swift */; };
 		14FD98F21DD061660084082E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FD98F01DD061660084082E /* Main.storyboard */; };
@@ -15,6 +22,8 @@
 		14FD98FA1DD061660084082E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FD98F81DD061660084082E /* LaunchScreen.storyboard */; };
 		14FD99051DD061660084082E /* Pop_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD99041DD061660084082E /* Pop_ItTests.swift */; };
 		14FD99101DD061660084082E /* Pop_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD990F1DD061660084082E /* Pop_ItUITests.swift */; };
+		14FD991E1DD0628A0084082E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD991D1DD0628A0084082E /* GameViewController.swift */; };
+		14FD99201DD062A00084082E /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD991F1DD062A00084082E /* EndViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1404526D1DD06B7500D5A0AC /* w1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w1.png; sourceTree = "<group>"; };
+		1404526F1DD06B7E00D5A0AC /* try.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = try.png; sourceTree = "<group>"; };
+		140452711DD06B8900D5A0AC /* swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe.png; sourceTree = "<group>"; };
+		140452731DD06B9300D5A0AC /* pop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pop.png; sourceTree = "<group>"; };
+		140452751DD06B9A00D5A0AC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		140452771DD0786700D5A0AC /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
+		14707B8C1DD0A030000D40AA /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		14FD98E91DD061660084082E /* Pop-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pop-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD98EC1DD061660084082E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14FD98EE1DD061660084082E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +65,8 @@
 		14FD990B1DD061660084082E /* Pop-ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pop-ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD990F1DD061660084082E /* Pop_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pop_ItUITests.swift; sourceTree = "<group>"; };
 		14FD99111DD061660084082E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FD991D1DD0628A0084082E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		14FD991F1DD062A00084082E /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +117,18 @@
 		14FD98EB1DD061660084082E /* Pop-It */ = {
 			isa = PBXGroup;
 			children = (
+				140452771DD0786700D5A0AC /* Audio */,
+				1404526D1DD06B7500D5A0AC /* w1.png */,
+				140452711DD06B8900D5A0AC /* swipe.png */,
+				140452731DD06B9300D5A0AC /* pop.png */,
 				14FD98EC1DD061660084082E /* AppDelegate.swift */,
+				1404526F1DD06B7E00D5A0AC /* try.png */,
 				14FD98EE1DD061660084082E /* ViewController.swift */,
+				140452751DD06B9A00D5A0AC /* logo.png */,
 				14FD98F01DD061660084082E /* Main.storyboard */,
+				14707B8C1DD0A030000D40AA /* OptionsViewController.swift */,
+				14FD991D1DD0628A0084082E /* GameViewController.swift */,
+				14FD991F1DD062A00084082E /* EndViewController.swift */,
 				14FD98F61DD061660084082E /* Assets.xcassets */,
 				14FD98F81DD061660084082E /* LaunchScreen.storyboard */,
 				14FD98FB1DD061660084082E /* Info.plist */,
@@ -238,9 +265,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140452781DD0786700D5A0AC /* Audio in Resources */,
 				14FD98FA1DD061660084082E /* LaunchScreen.storyboard in Resources */,
+				1404526E1DD06B7500D5A0AC /* w1.png in Resources */,
 				14FD98F71DD061660084082E /* Assets.xcassets in Resources */,
+				140452701DD06B7E00D5A0AC /* try.png in Resources */,
+				140452761DD06B9A00D5A0AC /* logo.png in Resources */,
+				140452721DD06B8900D5A0AC /* swipe.png in Resources */,
 				14FD98F21DD061660084082E /* Main.storyboard in Resources */,
+				140452741DD06B9300D5A0AC /* pop.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FD991E1DD0628A0084082E /* GameViewController.swift in Sources */,
+				14FD99201DD062A00084082E /* EndViewController.swift in Sources */,
 				14FD98EF1DD061660084082E /* ViewController.swift in Sources */,
+				14707B8D1DD0A030000D40AA /* OptionsViewController.swift in Sources */,
 				14FD98ED1DD061660084082E /* AppDelegate.swift in Sources */,
 				14FD98F51DD061660084082E /* Pop_It.xcdatamodeld in Sources */,
 			);
@@ -421,6 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ABK8U3Z3JM;
 				INFOPLIST_FILE = "Pop-It/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pokemon-Kno.Pop-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +471,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ABK8U3Z3JM;
 				INFOPLIST_FILE = "Pop-It/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pokemon-Kno.Pop-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +556,7 @@
 				14FD99161DD061660084082E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14FD99171DD061660084082E /* Build configuration list for PBXNativeTarget "Pop-ItTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +565,7 @@
 				14FD99191DD061660084082E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14FD991A1DD061660084082E /* Build configuration list for PBXNativeTarget "Pop-ItUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +574,7 @@
 				14FD991C1DD061660084082E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

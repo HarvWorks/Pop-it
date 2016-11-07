@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let multiPlayer: Bool = true
+    let extremeMode: Bool = false
+    let easyMode: Bool = false
+    let practiceMode: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +23,23 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!){
+        if (segue.identifier == "toOptionsMenu") {
+            let newVC = segue.destination as! OptionsViewController
+            newVC.multiPlayer = multiPlayer
+            newVC.extremeMode = extremeMode
+            newVC.easyMode = easyMode
+            newVC.practiceMode = practiceMode
+        }
+        else {
+            let newVC = segue.destination as! GameViewController
+            newVC.multiPlayer = multiPlayer
+            newVC.extremeMode = extremeMode
+            newVC.easyMode = easyMode
+            newVC.practiceMode = practiceMode
+        }
     }
 
 
