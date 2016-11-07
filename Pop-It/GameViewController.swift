@@ -111,6 +111,8 @@ class GameViewController: UIViewController {
     var motionManager = CMMotionManager()
     var player:AVAudioPlayer?;
     
+    
+    
     // Outlet
     
     @IBOutlet weak var CountDown: UILabel!
@@ -152,7 +154,7 @@ class GameViewController: UIViewController {
         }
         
         motionManager.gyroUpdateInterval = 0.2
-        motionManager.accelerometerUpdateInterval = 0.1
+        motionManager.accelerometerUpdateInterval = 0.12
         motionManager.deviceMotionUpdateInterval = 0.1
         
         //Start Recording Data
@@ -438,14 +440,16 @@ class GameViewController: UIViewController {
     
     func Game () {
         if !practiceMode {
+            
             if !waitingAction {
                 if previousTimer < NSDate().timeIntervalSince1970 - timer {
                     randomNumber()
+                    checkAction ()
                     playCommand(string: currentPopItBank[randomAction])
                     currentAction = ""
                     waitTimer = 0
                     waitingAction = true
-                    timer = 1.5 - speedup/2
+                    timer = 2.5 - speedup
                     previousTimer = NSDate().timeIntervalSince1970
                 }
             }
@@ -453,6 +457,7 @@ class GameViewController: UIViewController {
                 if previousTimer > NSDate().timeIntervalSince1970 - timer{
                     checkAction()
                     if currentAction == currentPopItBank[randomAction]{
+                        waitTimer = 0
                         playNoise(string: currentAction)
                         previousTimer = NSDate().timeIntervalSince1970
                         waitingAction = false
@@ -471,31 +476,36 @@ class GameViewController: UIViewController {
         }
         else {
             if currentAction != "" {
-                CountDown.text = currentAction
                 playNoise(string: currentAction)
+                CountDown.text = currentAction
                 currentAction = ""
             }
         }
     }
     
     func checkAction () {
-        if currentPopItBank[randomAction] == "Pass It!" && previousTimer < NSDate().timeIntervalSince1970 - timer/2{
-            currentAction = "Pass It!"
-        }
-        if currentPopItBank[randomAction] == "Slide It!" && (currentAction == "Slide Right!" || currentAction == "Slide Right!") {
-            currentAction = "Slide It!"
-        }
-        if currentAction != currentPopItBank[randomAction] && waitTimer == 0  && currentAction != ""{
-            waitTimer = NSDate().timeIntervalSince1970
-        }
-        if waitTimer != 0 {
-            if waitTimer > NSDate().timeIntervalSince1970 - 0.200 && currentAction == currentPopItBank[randomAction] {
-                waitTimer = 0
+        if waitingAction {
+            if currentPopItBank[randomAction] == "Pass It!" && previousTimer < NSDate().timeIntervalSince1970 - timer/2{
+                currentAction = "Pass It!"
             }
-            if waitTimer < NSDate().timeIntervalSince1970 - 0.200 {
-                endGame = true
-                EndGame()
+            if currentPopItBank[randomAction] == "Slide It!" && (currentAction == "Slide Right!" || currentAction == "Slide Right!") {
+                currentAction = "Slide It!"
             }
+            if currentAction != currentPopItBank[randomAction] && waitTimer == 0  && currentAction != ""{
+                waitTimer = NSDate().timeIntervalSince1970
+            }
+            if waitTimer > 100 {
+                if waitTimer < NSDate().timeIntervalSince1970 - 1.250 && waitTimer > 10000 {
+                    endGame = true
+                    EndGame()
+                }
+                if waitTimer > NSDate().timeIntervalSince1970 - 1.250 && currentAction == currentPopItBank[randomAction] {
+                    waitTimer = 0
+                }
+            }
+        }
+        else {
+           waitTimer = 0
         }
     }
     
@@ -806,7 +816,6 @@ class GameViewController: UIViewController {
     }
     
     func GameInit () {
-        currentAction = ""
         randomAction = 0
         waitTimer = 0
         waitingAction = false
@@ -839,8 +848,8 @@ class GameViewController: UIViewController {
         if multiPlayer {
             currentPopItBank.append(popItBank[10])
         }
-        currentPopItBank = popItBank
         countDownTimer = 3
+        currentAction = ""
     }
     
     func resetLinear () {

@@ -33,27 +33,27 @@ class OptionsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
     @IBAction func MultiPlayerAction(_ sender: UISwitch) {
         multiPlayer = Multi.isOn
     }
+    
     @IBAction func ExtremeMode(_ sender: UISwitch) {
         extremeMode = Extreme.isOn
         easyMode = false
         Easy.setOn(easyMode, animated: true)
     }
+    
     @IBAction func EasyMode(_ sender: UISwitch) {
         easyMode = Easy.isOn
         extremeMode = false
         Extreme.setOn(extremeMode, animated: true)
     }
+    
     @IBAction func PracticeMode(_ sender: UISwitch) {
         practiceMode = Practice.isOn
     }
     
-    
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let newVC = segue.destination as! GameViewController
         newVC.multiPlayer = multiPlayer
         newVC.extremeMode = extremeMode
